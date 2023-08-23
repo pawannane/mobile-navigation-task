@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #b88acb;
+}
+
+/*=================================
+  main styling starts here
+=================================*/
+.mobile-section{
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.img-container img{
+  height: 70vh;
+  border: 2px solid #fff;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit: cover;
+}
+
+.img-container{
+  position: relative;
+}
+
+.img-container li{
+  width: 100%;
+  position: absolute;
+  transition: opacity .4s ease;
+  opacity: 0;
+}
+
+.img-container .active-image{
+  opacity: 1; 
+}
+
+.mobile-nav {
+  width: 100%;
+  padding: 14px 0;
+  border: 2px solid #fff;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 70vh;
+  background-color: #fff;
+}
+
+.nav-icon > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #777;
+}
+.nav-icon > a:hover {
+  color: #b88acb;
+}
+
+.nav-icon a::before {
+  color: #777;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+.nav-icon a:hover::before {
+  color: #b88acb;
+}
+
+.home::before {
+  content: "\e3af";
+  font-size: 16px;
+}
+
+.work::before {
+  content: "\f0b1";
+  font-size: 16px;
+}
+
+.blog::before {
+  content: "\f518";
+  font-size: 16px;
+}
+
+.about::before {
+  content: "\e533";
+  font-size: 16px;
+}
+
+.active-nav a, .active-nav a::before{
+  color: #b88acb;
+}
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 640px starts here*/
+@media only screen and (max-width: 640px) {
+  .wrapper{
+    width: 50%;
+  }
+}
+
+/*media query for 560px starts here*/
+@media only screen and (max-width: 560px) {
+  .wrapper{
+    width: 60%;
+  }
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  .wrapper{
+    width: 70%;
+  }
+}
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+  .wrapper{
+    width: 80%;
+  }
+}
